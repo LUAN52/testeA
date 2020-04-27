@@ -1,0 +1,35 @@
+﻿@model List<Alunos>;
+
+    <div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Nome do aluno</th>
+                    <th scope="col">nota 1</th>
+                    <th scope="col">nota 2</th>
+                    <th scope="col">nota 3</th>
+
+                </tr>
+            </thead>
+
+            
+
+                @foreach (var item2 in Model)
+                {
+                    
+                        <tr>
+                            @{ 
+                                 var prova = item2.Prova;
+                            }
+                           
+                            <td>@item2.Nome</td>
+                            <td>@prova[0].Nota</td>
+                            <td>@prova[1].Nota</td>
+                            <td>@prova[2].Nota</td>
+                        </tr>
+              
+                }
+
+            
+        </table>
+    </div>

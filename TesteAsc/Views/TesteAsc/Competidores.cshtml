@@ -1,0 +1,24 @@
+﻿@model List<Provas>
+
+    <div class="container">
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Nome do aluno</th>
+                    <th scope="col">Nota da competicao</th>
+                   
+                </tr>
+            </thead>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Aluno.Nome</td>
+                    <td>@item.Nota</td>
+                </tr>
+
+            }
+
+        </table>
+    </div>
